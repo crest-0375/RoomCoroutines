@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">RoomCoroutines</string>
+    <string name="signup">Sign up</string>
+</resources>
