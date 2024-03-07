@@ -23,7 +23,7 @@ class LoginViewModel(application: Application) : AndroidViewModel(application) {
     fun login(username: String, password: String) {
         coroutineScope.launch {
             val user = db.getUser(username)
-            if (user.passwordHash == password.hashCode()) {
+            if (user?.passwordHash == password.hashCode()) {
                 LoginState.isLoggedIn = true
                 LoginState.user = User(user.userName, user.passwordHash, user.info)
                 withContext(Dispatchers.Main) {
